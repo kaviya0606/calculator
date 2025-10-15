@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=VT323&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(#ffffff, #dcdcdc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  background-color: #333;
+  padding: 25px;
+  border-radius: 20px;
+  width: 320px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+.value {
+  grid-column: span 4;
+  height: 70px;
+  background-color: #a7af7c;
+  border: none;
+  text-align: right;
+  padding: 10px;
+  font-size: 30px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-family: 'Orbitron', monospace; 
+  letter-spacing: 2px;
+  color: #111;
+  box-shadow: inset -3px -3px 8px rgba(255, 255, 255, 0.2),
+              inset 3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.btn {
+  height: 65px;
+  background-color: #222;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.1),
+              inset 2px 2px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+.btn:hover {
+  background-color: #3a3a3a;
+}
+
+/* 🔴 AC button */
+.ac {
+  background-color: #e74c3c;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 0 8px rgba(231, 76, 60, 0.6);
+}
+.ac:hover {
+  background-color: #ff6b5a;
+}
+
+/* 🟦 Equal button */
+.equal {
+  background-color: #0a84ff;
+  color: #fff;
+  font-weight: bold;
+}
+.equal:hover {
+  background-color: #409cff;
+}
+.zero {
+  grid-column: span 2;
+}
+button {
+  outline: none;
+  user-select: none;
+}
